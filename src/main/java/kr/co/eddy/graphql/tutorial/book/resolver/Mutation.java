@@ -11,8 +11,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class Mutation implements GraphQLMutationResolver {
 
-    private AuthorRepository authorRepository;
-    private BookRepository bookRepository;
+    private final AuthorRepository authorRepository;
+    private final BookRepository bookRepository;
 
     @Autowired
     public Mutation(AuthorRepository authorRepository, BookRepository bookRepository) {
